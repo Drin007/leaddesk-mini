@@ -23,7 +23,7 @@ export default function Login() {
     setSubmitting(true);
     try {
       await login(email.trim(), password);
-      navigate("/dashboard");
+      navigate("/admin");
     } catch (err) {
       setError(
         err.response?.data?.message || "Login failed. Please try again."
